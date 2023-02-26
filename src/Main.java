@@ -183,6 +183,21 @@ public class Main {
         System.out.println("Список механиков у bmw: \n" + bmw.getMechanics());
         System.out.println("Список механиков у audi: \n" + audi.getMechanics());
         System.out.println();
+
+        System.out.println("Создание множества механиков HashSet");
+        Set<Mechanic> mechanicSet = new HashSet<>();
+        System.out.println("В моножество добавим механиков из списков passengerCar, Truck, Bus, bmwMechanics");
+        System.out.println("В этих списках механики могут повторяться");
+        mechanicSet.addAll(passengerCarMechanics);
+        mechanicSet.addAll(truckMechanics);
+        mechanicSet.addAll(busMechanics);
+        mechanicSet.addAll(bmwMechanics);
+        System.out.println("Для убедительности еще пробуем добавить полный список механиков.");
+        mechanicSet.addAll(listOfAllMechanics);
+        System.out.println("Вывод в консоль множества mechanicSet.");
+        System.out.println("В множестве не должно быть повторов");
+        System.out.println(mechanicSet);
+        System.out.println();
     }
     public static void printInformation(Driver driver, Transport transport) {
         System.out.println("Водитель " + driver.getFullName() +
